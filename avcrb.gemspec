@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Ethan Soutar-Rau"]
   s.email       = ["ethan.soutar.rau@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{ffmpeg tools}
+  s.description = %q{Wrappers for common operations on videos using ffmpeg}
 
   s.rubyforge_project = "avcrb"
 
