@@ -11,10 +11,11 @@ module Avcrb
 
     def rip
       command =  %Q[ffmpeg -y ]
+            command << %Q[ -ss #{@offset} ]
+
       command << %Q[-i "#{@source}" ]
       command << %Q[-s #{@resolution}] if @resolution
       command << %Q[ -vframes 1]
-      command << %Q[ -ss #{@offset} ]
 
       command << %Q[  "#{@destination}.jpg"]
       system command

@@ -31,7 +31,7 @@ describe Avcrb::FrameRipper do
 
       @frame.rip
 
-      Digest::MD5.hexdigest(File.read(@frame.destination + '.jpg')).should == 'ff297d16fc320e7262310d8cfafdcf25'
+      Digest::MD5.hexdigest(File.read(@frame.destination + '.jpg')).should == '68ca81ff84f87c95b539f1a909ad8176'
     end
 
   end
