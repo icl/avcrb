@@ -36,4 +36,14 @@ describe Avcrb::FrameRipper do
 
   end
 
+  describe "slicing clips" do
+    before :each do
+      @frame = Avcrb::FrameRipper.new(File.expand_path('spec/support/1.m4v'), :destination => File.expand_path('spec/support/out/slice'))
+    end
+
+    it "should slice from the start by default" do
+      @frame.slice 10
+    end
+
+  end
 end
