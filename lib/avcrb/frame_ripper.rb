@@ -29,8 +29,8 @@ module Avcrb
       command << %Q[ -s #{@resolution}] if @resolution
       command << %Q[ -t #{duration} ]
 
-      #command << %Q[ -vcodec libx264]
-      command << %Q[  "#{@destination}.avi"]
+      command << %Q[ -vcodec copy]
+      command << %Q[  "#{@destination}.m4v"]
       system command
 
     end
