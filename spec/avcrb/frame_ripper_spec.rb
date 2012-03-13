@@ -28,7 +28,7 @@ describe Avcrb::FrameRipper do
    #   FileUtils.rm Dir.glob('spec/support/out/*')
     end
     it "should rip the first frame by default" do
-
+    pending
       @frame.rip
 
       Digest::MD5.hexdigest(File.read(@frame.destination + '.jpg')).should == '68ca81ff84f87c95b539f1a909ad8176'
@@ -36,14 +36,4 @@ describe Avcrb::FrameRipper do
 
   end
 
-  describe "slicing clips" do
-    before :each do
-      @frame = Avcrb::FrameRipper.new(File.expand_path('spec/support/1.m4v'), :destination => File.expand_path('spec/support/out/slice'))
-    end
-
-    it "should slice from the start by default" do
-      @frame.slice 10
-    end
-
-  end
 end

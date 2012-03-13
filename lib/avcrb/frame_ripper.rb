@@ -20,19 +20,5 @@ module Avcrb
       command << %Q[  "#{@destination}.jpg"]
       system command
     end
-
-    def slice duration
-      command =  %Q[ffmpeg -y ]
-      command << %Q[ -ss #{@offset} ]
-
-      command << %Q[ -i "#{@source}" ]
-      command << %Q[ -s #{@resolution}] if @resolution
-      command << %Q[ -t #{duration} ]
-
-      command << %Q[ -vcodec copy]
-      command << %Q[  "#{@destination}.m4v"]
-      system command
-
-    end
   end
 end
