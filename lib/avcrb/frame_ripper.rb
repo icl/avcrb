@@ -4,6 +4,7 @@ module Avcrb
 
     def initialize source, options={}
       @source = source
+      File::Stat.new(source)
       @destination = options.delete(:destination) || "thumbnail"
       @offset = options[:offset] || 0.0
       @resolution = options.delete(:resolution)
